@@ -1,0 +1,83 @@
+.feature {
+  margin-top: 22rem;
+  position: relative;
+  &-img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(30%, -50%);
+  }
+  &-main-item1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : 3rem; 
+  }
+  &-content {
+    max-width: 48.6rem;
+    width: 100%;
+    max-width: 486px;
+  }
+  &-heading {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $title-color;
+    position: relative;
+    padding-bottom: 2.6rem;
+    &::before {
+      content: "";
+      position: absolute;
+      @include size(5.6rem, 0.2rem);
+      background-color: $title-color;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &-text {
+    margin-top: 3.1rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $text-color;
+  }
+  &-button {
+    padding: 2rem 4rem;
+    border: 1px solid $primary-color;
+    display: inline-block;
+    margin-top: 3.7rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  &-main-item2 {
+    margin-top: 23.6rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 1023px) {
+    margin-top: 14rem;
+    &-main-item1 {
+      flex-direction: column;
+    }
+    &-main-item2 {
+      flex-direction: column-reverse;
+    }
+    &-heading {
+      font-size: 3.2rem;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    &-heading {
+      font-size: 3rem;;
+    }
+    &-text {
+      font-size: 1.4rem;
+    }
+    &-button {
+      padding: 1rem 3rem;
+    }
+  }
+}

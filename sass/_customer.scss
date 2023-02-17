@@ -1,0 +1,166 @@
+.customer {
+  margin-top: 26.6rem;
+  position: relative;
+  &-dots__right {
+    position: absolute;
+    top: 0;
+    right: -50px;
+  }
+  &-dots__left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50px, 0);
+    z-index: -1;
+  }
+  &-main {
+    position: relative;
+    padding: 6.4rem 11.8rem 8.9rem 11.8rem;
+    color: $white-color;
+    background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    max-width: 1120px;
+    border-radius: 20px;
+  }
+  &-heading {
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 700;
+  }
+  &-list {
+    margin-top: 9.3rem;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-left {
+    width: 100%;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &-avatar {
+    border: 4px solid $white-color;
+    border-radius: 100%;
+  }
+  &-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  &-job {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  &-right {
+    width: 100%;
+  }
+  &-text {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: $white-color;
+    line-height: 1.4;
+  }
+  &-content.slick-slider {
+    position: unset;
+  }
+  .slick-prev {
+    position: absolute;
+    bottom: 0;
+    left: 38%;
+    z-index: 2;
+  }
+  .slick-next {
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+    z-index: 2;
+  }
+  .slick-arrow {
+    cursor: pointer;
+    transform: translate(50%, 54px);
+    border: none;
+    background-color: transparent;
+    color: $primary-color;
+    font-size: 2rem;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0 2rem;
+    list-style: none;
+    transform: translate(-50%, 47px);
+    .slick-active button {
+      opacity: 1;
+    }
+    button {
+      @include size(1rem, 1rem);
+      background-color: $primary-color;
+      font-size: 0;
+      border-radius: 100rem;
+      border: none;
+      cursor: pointer;
+      opacity: 0.3;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    margin-top: 14rem;
+    &-heading {
+      font-size: 3.3rem;
+    }
+    &-main {
+      padding: 5rem 8rem 7rem 8rem;
+    }
+    &-item {
+      flex-direction: column;
+      align-items: start;
+    }
+    &-name {
+      font-size: 2rem;
+    }
+    &-job {
+      font-size: 1.6rem;
+    }
+    &-text {
+      font-size: 1.7rem;
+    }
+    &-list {
+      margin-top: 6rem;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-heading {
+      font-size: 2.6rem;
+    }
+    &-main {
+      padding: 2rem 4rem 2rem 4rem;
+    }
+    &-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem 0;
+    }
+    &-item {
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    margin-top: 6rem;
+    &-heading {
+      font-size: 2.2rem;
+    }
+    &-main {
+      padding: 1rem 2rem 1rem 2rem;
+    }
+    &-list {
+      margin-top: 3rem;
+    }
+    &-text {
+      font-size: 1.4rem;
+    }
+  }
+}

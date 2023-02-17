@@ -1,0 +1,20 @@
+.header {
+    margin-top: 5.6rem;
+    margin-bottom: 8rem;
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-dots {
+        top: 16rem;
+        left: 0;
+        transform: translate(-30%, 0);
+        position: absolute;
+        z-index: 1;
+    }
+    @media screen and (max-width: 767px) {
+        margin-top: 0;
+        margin-bottom: 4rem;
+    }
+}

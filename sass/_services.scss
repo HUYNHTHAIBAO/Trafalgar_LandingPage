@@ -1,0 +1,114 @@
+.services {
+    margin-top: 190px;
+    background: url("/images/services-bg.png")  no-repeat -1px center / auto;
+    &-heading {
+        font-size: 3.6rem;
+        font-weight: 700;
+        text-align: center;
+        position: relative;
+        padding-bottom: 2.6rem;
+        margin-bottom: 3.3rem;
+        &::before {
+            content: "";
+            position: absolute;
+            @include size(5.5rem, 0.2rem);
+            background-color: $title-color;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &-text {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 952px;
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 8rem;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 3.7rem 3.4rem;
+    }
+    &-items {
+        max-width: 350px;
+        height: 350px;
+        background-color: $white-color;
+        padding: 5.4rem 4.5rem 4.6rem 3.9rem;
+        box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+        border-radius: 2rem;
+        &__title {
+            margin-top: 2.2rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+        &__text {
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: $text-color;
+        }
+    }
+    &-button {
+
+        text-align: center;
+        margin-top: 6.9rem;
+    }
+    &-button__link {
+        color: $primary-color;
+        font-size: 1.8rem;
+        font-weight: 700;
+        border: 1px solid $primary-color;
+        padding: 2rem 4rem;
+        border-radius: 2rem;
+        text-decoration: none;
+    }
+    @media screen and (max-width : 1023px) {
+        &-list {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        @media screen and (max-width: 767px) {
+            margin-top: 14rem;
+            &-list {
+                grid-template-columns: 1fr;
+            }
+            &-text {
+                margin-bottom: 2rem;
+            }
+            &-items {
+                padding: 5rem 4rem 4rem 3rem;
+                max-width: 100%;
+                &-text {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        @media screen and (max-width : 479px) {
+            margin-top: 10rem;
+            &-heading {
+                font-size: 3rem;
+            }
+            &-text {
+                font-size: 1.4rem;
+            }
+            &-items {
+                height: 300px;
+                &__title {
+                    font-size: 2rem;
+                }
+                &__text {
+                    font-size: 1.4rem;
+                }
+            }
+            &-button {
+                margin-top: 5rem;
+                &__link {
+                    padding: 1rem 3rem;
+                }
+            }
+        }
+    }
+}

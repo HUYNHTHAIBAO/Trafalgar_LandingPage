@@ -1,0 +1,113 @@
+.article {
+  margin-top: 21.6rem;
+  background: url("/images/article-bg.png") no-repeat right center / auto;
+  .main {
+  }
+  &-heading {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $title-color;
+    text-align: center;
+    position: relative;
+    padding-bottom: 2.6rem;
+    margin-bottom: 2.6rem;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      @include size(5.6rem, 0.2rem);
+      background-color: $title-color;
+      transform: translate(-50%, 0);
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3.4rem;
+  }
+  &-image {
+    object-fit: cover;
+  }
+  &-content {
+    padding: 2.4rem 6.6rem 3.5rem 3.3rem;
+  }
+  &-title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: $title-color;
+  }
+  &-text {
+    font-weight: 300;
+    color: $text-color;
+    margin-top: 1.2rem;
+    font-size: 1.6rem;
+  }
+  &-more {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $primary-color;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2.5rem;
+  }
+  &-buttons {
+    margin-top: 6.9rem;
+    text-align: center;
+  }
+  &-button {
+    padding: 2rem 6rem;
+    border-radius: 2rem;
+    border: 1px solid $primary-color;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $primary-color;
+    text-align: center;
+    text-decoration: none;
+  }
+  @media screen and (max-width : 1023px) {
+    margin-top: 14rem;
+    &-list {
+      grid-template-columns: 1fr;
+      gap : 3rem 3rem;
+    }
+    &-content {
+      padding: 0;
+      text-align: center;
+    }
+    &-items {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-heading {
+      font-size: 3.2rem;
+    }
+    &-content {
+      margin-top: 2rem;
+    }
+    &-items {
+      flex-direction: column;
+    }
+    &-title {
+        font-size: 2rem;
+    }
+    &-text {
+      font-size: 1.4rem;
+    }
+    &-more {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    &-buttons {
+      margin-top: 5rem;
+    }
+    &-button {
+      padding: 1rem 3rem;
+    }
+
+  }
+}

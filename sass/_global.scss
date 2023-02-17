@@ -1,0 +1,15 @@
+.wrapper {
+    max-width: 1600px;
+    // padding: 30px;
+    margin: 0 auto;
+}
+.container {
+    max-width: calc(1120px - 30px);
+    margin: 0 auto;
+    padding: 30px;
+}
+.container-fluid {
+    max-width: calc(1220px - 30px);
+    margin: 0 auto;
+    padding: 30px;
+}
